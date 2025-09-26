@@ -3,21 +3,86 @@
 *::after {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5em;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;  
+}
+
+.form-container {
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+}
+
+.form-container.active {
+    display: block;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+}
+
+.form {
+    background-color: white;
+    border: 2px solid lightblue;
+    border-radius: 4px;
+    position: relative;
+    display: grid;
+    margin: 64px;
+    padding: 16px;
+}
+
+.form-close {
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border: none;
+    justify-self: end;
+}
+
+.form-close svg:hover {
+    fill: red;
+}
+
+.form form {
+    display: grid;
+    gap: 8px;
+}
+
+.form-btn {
+    margin-top: 8px;
+}
+
+.form-btn button {
+    padding: 8px;
+    width: 100%;
+    background-color: rgb(247, 252, 252);
+    color: black;
+    border: 2px solid lightblue;
+    border-radius: 4px;
+}
+
+.form-btn button:hover {
+    color: black;
+    background-color: rgba(182, 250, 250, 0.5);
+}
 
 .container {
-    margin: 16px;
     padding: 8px;
     border: 2px solid lightblue;
     background-color: rgb(240, 255, 255);
-    border-radius: 4px;
     display: grid;
     grid-template-columns: repeat(auto);
     grid-template-rows: 80px 1fr;
 }
 
-.bookGrid {
+.book-grid {
     padding: 8px;
     display: grid;
     grid-auto-flow: row;
@@ -33,9 +98,9 @@
 .book {
     margin: 16px;
     padding: 8px;
-
     height: 300px;
     border: 2px solid lightblue;
     background-color: white;
     border-radius: 4px;
+    box-shadow: 2px 4px 4px rgba(43, 43, 43, 0.288);
 }

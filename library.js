@@ -26,7 +26,7 @@ console.table(myLibrary)
 function createCards() {
 
     let books = myLibrary.length
-    let bookGrid = document.querySelector(".bookGrid")
+    let bookGrid = document.querySelector(".book-grid")
 
 
     myLibrary.forEach(book => {
@@ -61,10 +61,22 @@ function createCards() {
 };
 
 function newBookForm() {
-    
-}
 
 
+    let addBookBtn = document.querySelector(".add-book")
+    let formShow = document.querySelector(".form-container")
+    let formClose = document.querySelector(".form-close")
+
+        addBookBtn.addEventListener("click", () => {
+            formShow.classList.add("active")
+
+            formClose.addEventListener("click", () => {
+                formShow.classList.remove("active")
+            });
+    });
+};
+
+newBookForm()
 createCards();
 
 
