@@ -1,3 +1,41 @@
-div {
-    color: red;
+*, 
+*::before, 
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    margin: 16px;
+    padding: 8px;
+    border: 2px solid lightblue;
+    background-color: rgb(240, 255, 255);
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: repeat(auto);
+    grid-template-rows: 80px 1fr;
+}
+
+.bookGrid {
+    padding: 8px;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto-fit;
+}
+
+.container button {
+    margin: 8px;
+    padding: 8px;
+}
+
+.book {
+    margin: 16px;
+    padding: 8px;
+
+    height: 300px;
+    border: 2px solid lightblue;
+    background-color: white;
+    border-radius: 4px;
 }
